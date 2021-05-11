@@ -5,25 +5,25 @@
 class Magica < Formula
   desc "magica is a tool for showing icons in tmux's statusline"
   homepage "https://github.com/bensadeh/magica/"
-  version "0.1"
+  version "0.2"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/bensadeh/magica/releases/download/0.1/magica_0.1_macOS_64-bit.tar.gz"
-    sha256 "f71629b2df186830d766a3f8dc30b77e9aab3bd3631919556c4962c4cd3ba325"
+    url "https://github.com/bensadeh/magica/releases/download/0.2/magica_0.2_macOS_64-bit.tar.gz"
+    sha256 "704ae14903280f2fb39b2fc001decb8dff595ecbdcd56277cf97629fff2d63c7"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/bensadeh/magica/releases/download/0.1/magica_0.1_macOS_arm64.tar.gz"
-    sha256 "6a8171936ae7e287803d80be8235c0312f350273fcdc9a426df1cdb3cdf2af73"
+    url "https://github.com/bensadeh/magica/releases/download/0.2/magica_0.2_macOS_arm64.tar.gz"
+    sha256 "2c92e2e48d3f7298b5802f8ee97209476061aa40df6737fc8af886b60fe7a77d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bensadeh/magica/releases/download/0.1/magica_0.1_Linux_64-bit.tar.gz"
-    sha256 "7243da70138d86287a86b49b6e8a54737c05f6ee54bf48f4874715ff76f1f33c"
+    url "https://github.com/bensadeh/magica/releases/download/0.2/magica_0.2_Linux_64-bit.tar.gz"
+    sha256 "465897b82ff1791dbb96cec67c02fd834f04ef6a93275e1d4fe5a467e6019e45"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/bensadeh/magica/releases/download/0.1/magica_0.1_Linux_arm64.tar.gz"
-    sha256 "f97a94e27a9309398d31c264a89d41a018828fc8ecd2faa786c128bb50d17c82"
+    url "https://github.com/bensadeh/magica/releases/download/0.2/magica_0.2_Linux_arm64.tar.gz"
+    sha256 "4ea9b1f4e9849c98e6e3b8bba0521abb7c2d7b964f2d983af4e7d8bd9b6a9236"
   end
 
   def install
