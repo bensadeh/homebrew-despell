@@ -5,25 +5,30 @@
 class Magica < Formula
   desc "magica is a tool for showing icons in tmux's statusline"
   homepage "https://github.com/bensadeh/magica/"
-  version "0.3"
+  version "0.4"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/bensadeh/magica/releases/download/0.3/magica_0.3_macOS_64-bit.tar.gz"
-    sha256 "5b2a1d1f40105367f349fe58217028abdb8c6bc470eda8a58d831fa035aa5747"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/bensadeh/magica/releases/download/0.4/magica_0.4_macOS_64-bit.tar.gz"
+      sha256 "ac6435a274b44a45a83efc1f157b0f4281c91b089cc818415d4c361b6d7eef09"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/bensadeh/magica/releases/download/0.4/magica_0.4_macOS_arm64.tar.gz"
+      sha256 "5e660ae984739cd50b6a86ee1e691d9e434df5b4fd16a04bf408eafd86322cf0"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/bensadeh/magica/releases/download/0.3/magica_0.3_macOS_arm64.tar.gz"
-    sha256 "193ec053a73e6f631ffc6c8c9079c1a5e097d52dadf768115e1bcc48734b5205"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bensadeh/magica/releases/download/0.3/magica_0.3_Linux_64-bit.tar.gz"
-    sha256 "ee3d4a6844fc9f2bda8d67788822bb74afcb3fa0d0d83d38529cf8933af44d83"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/bensadeh/magica/releases/download/0.3/magica_0.3_Linux_arm64.tar.gz"
-    sha256 "e1176ad0535c821cdb32ccabeddd553d5050416e46a18101bdf82614eb429fae"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/bensadeh/magica/releases/download/0.4/magica_0.4_Linux_64-bit.tar.gz"
+      sha256 "fc99ad108a8a6d0f226da1107c6833681bc849d45ac741d27e3a7227eed68fe4"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bensadeh/magica/releases/download/0.4/magica_0.4_Linux_arm64.tar.gz"
+      sha256 "30c0554c86668624489c4469bf81bcdf1dabe1fbbeab526904b865c7fbed58fd"
+    end
   end
 
   def install
