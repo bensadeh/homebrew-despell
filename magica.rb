@@ -34,6 +34,7 @@ class Magica < Formula
 
   def install
     bin.install "circumflex" => "clx"
-    man.install "#{buildpath}/man/clx.1"
+    prefix.install_metafiles
+    man.install "man"
   end
 end
