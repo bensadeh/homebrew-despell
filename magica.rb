@@ -14,7 +14,7 @@ class Magica < Formula
       sha256 "e3537c39262218fe8f5d39cdc8a3b99362aafa0d688d26b9a69c5356d5e2f5ef"
 
       def install
-        bin.install "circumflex" => "clx"
+        bin.install "circumflex"
         man.install "man"
       end
     end
@@ -23,7 +23,7 @@ class Magica < Formula
       sha256 "819bcd9059da675aa09612f5ddd6a19827bddd1fb81312b19f32ef0192e1e397"
 
       def install
-        bin.install "circumflex" => "clx"
+        bin.install "circumflex"
         man.install "man"
       end
     end
@@ -35,7 +35,7 @@ class Magica < Formula
       sha256 "9259dcef3cc0b90b24d3490e52d39ba4c46d855166bf64b7c65da1e5ab5f3514"
 
       def install
-        bin.install "circumflex" => "clx"
+        bin.install "circumflex"
         man.install "man"
       end
     end
@@ -44,7 +44,7 @@ class Magica < Formula
       sha256 "f4fd0bd3b78cddeef5f6389d1e3a0361a02c4214d93bd7ea0331114e6f55efd1"
 
       def install
-        bin.install "circumflex" => "clx"
+        bin.install "circumflex"
         man.install "man"
       end
     end
