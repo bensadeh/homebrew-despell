@@ -15,6 +15,7 @@ class Magica < Formula
 
       def install
         bin.install "circumflex"
+        prefix.install_metafiles
         man.install "man"
       end
     end
@@ -24,6 +25,7 @@ class Magica < Formula
 
       def install
         bin.install "circumflex"
+        prefix.install_metafiles
         man.install "man"
       end
     end
@@ -36,6 +38,7 @@ class Magica < Formula
 
       def install
         bin.install "circumflex"
+        prefix.install_metafiles
         man.install "man"
       end
     end
@@ -45,6 +48,7 @@ class Magica < Formula
 
       def install
         bin.install "circumflex"
+        prefix.install_metafiles
         man.install "man"
       end
     end
