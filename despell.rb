@@ -5,21 +5,21 @@
 class Despell < Formula
   desc "despell puts icons in tmux's statusline"
   homepage "https://github.com/bensadeh/despell/"
-  version "0.6.1"
+  version "0.6.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.1/despell_0.6.1_macOS_arm64.tar.gz"
-      sha256 "27b2384f75294bcf128cd741672c84bb358c2c7f0cbd32301d24796522139b5e"
+      url "https://github.com/bensadeh/despell/releases/download/0.6.2/despell_0.6.2_macOS_arm64.tar.gz"
+      sha256 "a7a6ae7dc229892de0c36f6dbde019b838cf145d5ed89edf8c88bec155feb286"
 
       def install
         bin.install "despell"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.1/despell_0.6.1_macOS_64-bit.tar.gz"
-      sha256 "f09381614e58be2d21c66ab0711ab8bddaa9a9e801232416a68ef1bc30243cf4"
+      url "https://github.com/bensadeh/despell/releases/download/0.6.2/despell_0.6.2_macOS_64-bit.tar.gz"
+      sha256 "48bbe266ca3bbd202093f8652cdaa67333f546b45b2e0a18c76744c2d48dcdb8"
 
       def install
         bin.install "despell"
@@ -29,16 +29,16 @@ class Despell < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.1/despell_0.6.1_Linux_arm64.tar.gz"
-      sha256 "0bfae4ca6919abef51856491753e1df318835c8d1ba80decaef4d4a587fbc858"
+      url "https://github.com/bensadeh/despell/releases/download/0.6.2/despell_0.6.2_Linux_arm64.tar.gz"
+      sha256 "5f7ef59343eeef0d987f6c18d6023e468f5cb9989ffc85055f925f03324a723a"
 
       def install
         bin.install "despell"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.1/despell_0.6.1_Linux_64-bit.tar.gz"
-      sha256 "10b932fc47228be5b85eaabec5df459d0ccd91a23a9356605877c661037faa1f"
+      url "https://github.com/bensadeh/despell/releases/download/0.6.2/despell_0.6.2_Linux_64-bit.tar.gz"
+      sha256 "ed3cdf91b6d79f0d71b51c13fb9b595ddf13f5a9f3cc97a61d1929a9073fa191"
 
       def install
         bin.install "despell"
