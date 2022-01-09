@@ -5,21 +5,21 @@
 class Despell < Formula
   desc "despell puts icons in tmux's statusline"
   homepage "https://github.com/bensadeh/despell/"
-  version "0.6.3"
+  version "0.6.4"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.3/despell_0.6.3_macOS_arm64.tar.gz"
-      sha256 "ac82e977d23fa8d271739a5dbfed1f5ae5c491fa261b272238deb302cd17f872"
+    if Hardware::CPU.intel?
+      url "https://github.com/bensadeh/despell/releases/download/0.6.4/despell_0.6.4_macOS_64-bit.tar.gz"
+      sha256 "de053ff4aa57278b4f5b8ab301a00f0dfd5951beb8a4c0a543c126ab1c35f084"
 
       def install
         bin.install "despell"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.3/despell_0.6.3_macOS_64-bit.tar.gz"
-      sha256 "71107af492e8c2bdc90a55f6cb35d1804b6a8e8e3b93cc499b02fc9ad213f359"
+    if Hardware::CPU.arm?
+      url "https://github.com/bensadeh/despell/releases/download/0.6.4/despell_0.6.4_macOS_arm64.tar.gz"
+      sha256 "7f0ef7aa5765f0ae668712023d776e78ba70d282e8c1fb1242a5c6f3194af065"
 
       def install
         bin.install "despell"
@@ -28,17 +28,17 @@ class Despell < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.3/despell_0.6.3_Linux_64-bit.tar.gz"
-      sha256 "1c334ef6ebfc0e8ec8233a741596190a610698cd80f42000d4d38679762b3d14"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bensadeh/despell/releases/download/0.6.4/despell_0.6.4_Linux_arm64.tar.gz"
+      sha256 "0d620032fdca6e896f4097fc2645b4a7b0e30b3f67574a056b38ac7e0922c78a"
 
       def install
         bin.install "despell"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.3/despell_0.6.3_Linux_arm64.tar.gz"
-      sha256 "51f7ebe5afbca2d2b6f0cc0fe83aa2a72aacbc7de4905e3fac5aea5c31a26d32"
+    if Hardware::CPU.intel?
+      url "https://github.com/bensadeh/despell/releases/download/0.6.4/despell_0.6.4_Linux_64-bit.tar.gz"
+      sha256 "f2da47bdab74a5728c88bb1dd3f83746d30b8c85dccf3a60639022afec01da04"
 
       def install
         bin.install "despell"
