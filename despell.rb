@@ -5,43 +5,43 @@
 class Despell < Formula
   desc "despell puts icons in tmux's statusline"
   homepage "https://github.com/bensadeh/despell/"
-  version "0.6.4"
+  version "0.6.5"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.4/despell_0.6.4_macOS_64-bit.tar.gz"
-      sha256 "de053ff4aa57278b4f5b8ab301a00f0dfd5951beb8a4c0a543c126ab1c35f084"
+    if Hardware::CPU.arm?
+      url "https://github.com/bensadeh/despell/releases/download/0.6.5/despell_0.6.5_macOS_arm64.tar.gz"
+      sha256 "b9d3cbb87d22c9ecef02b091813a4ddbd4773a032ac33e7dd2429c548b50d962"
 
       def install
-        bin.install "despell"
+        man1.install "#{buildpath}/share/man/abc.1"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.4/despell_0.6.4_macOS_arm64.tar.gz"
-      sha256 "7f0ef7aa5765f0ae668712023d776e78ba70d282e8c1fb1242a5c6f3194af065"
+    if Hardware::CPU.intel?
+      url "https://github.com/bensadeh/despell/releases/download/0.6.5/despell_0.6.5_macOS_64-bit.tar.gz"
+      sha256 "cbace3f99b6e6f05cabb5d7cf49c7dd63c3b735ce07c0f420faa214d9d399e89"
 
       def install
-        bin.install "despell"
+        man1.install "#{buildpath}/share/man/abc.1"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.4/despell_0.6.4_Linux_arm64.tar.gz"
-      sha256 "0d620032fdca6e896f4097fc2645b4a7b0e30b3f67574a056b38ac7e0922c78a"
+    if Hardware::CPU.intel?
+      url "https://github.com/bensadeh/despell/releases/download/0.6.5/despell_0.6.5_Linux_64-bit.tar.gz"
+      sha256 "eeb411da0ccd29420058c87ce7f78b2221fbb6adbe9052a7217431d288f37138"
 
       def install
-        bin.install "despell"
+        man1.install "#{buildpath}/share/man/abc.1"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bensadeh/despell/releases/download/0.6.4/despell_0.6.4_Linux_64-bit.tar.gz"
-      sha256 "f2da47bdab74a5728c88bb1dd3f83746d30b8c85dccf3a60639022afec01da04"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bensadeh/despell/releases/download/0.6.5/despell_0.6.5_Linux_arm64.tar.gz"
+      sha256 "02f749265b29d0e44893882d8a57a9fa904ec0de45365e07e7875921a0580f22"
 
       def install
-        bin.install "despell"
+        man1.install "#{buildpath}/share/man/abc.1"
       end
     end
   end
