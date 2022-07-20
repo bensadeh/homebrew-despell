@@ -15,6 +15,7 @@ class Despell < Formula
 
       def install
         man1.install "#{buildpath}/share/man/abc.1"
+        bin.install "despell"
       end
     end
     if Hardware::CPU.intel?
@@ -23,6 +24,7 @@ class Despell < Formula
 
       def install
         man1.install "#{buildpath}/share/man/abc.1"
+        bin.install "despell"
       end
     end
   end
@@ -34,6 +36,7 @@ class Despell < Formula
 
       def install
         man1.install "#{buildpath}/share/man/abc.1"
+        bin.install "despell"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
@@ -42,6 +45,7 @@ class Despell < Formula
 
       def install
         man1.install "#{buildpath}/share/man/abc.1"
+        bin.install "despell"
       end
     end
   end
