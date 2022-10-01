@@ -5,13 +5,13 @@
 class Despell < Formula
   desc "despell puts icons in tmux's statusline"
   homepage "https://github.com/bensadeh/despell/"
-  version "0.8"
+  version "0.8.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bensadeh/despell/releases/download/0.8/despell_0.8_macOS_64-bit.tar.gz"
-      sha256 "075136da814da590c9ceff550e4effe29e938bc45b89bce93d3ab0d484c7f354"
+      url "https://github.com/bensadeh/despell/releases/download/0.8.1/despell_0.8.1_macOS_64-bit.tar.gz"
+      sha256 "a47108a83d2c6f7fabe75bc8adca9b2c20fd2a3be4676bcff3db005c59da4fe7"
 
       def install
         man1.install "#{buildpath}/share/man/abc.1"
@@ -19,8 +19,8 @@ class Despell < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bensadeh/despell/releases/download/0.8/despell_0.8_macOS_arm64.tar.gz"
-      sha256 "fc9f25d090ae5091372c949797a74c19aedef76afdf52120c479aa99aa662d12"
+      url "https://github.com/bensadeh/despell/releases/download/0.8.1/despell_0.8.1_macOS_arm64.tar.gz"
+      sha256 "f2e2d4751b6f7b67feee82ce11a649a3e60b22be2ec4e6960dc2a84d31bd4b9d"
 
       def install
         man1.install "#{buildpath}/share/man/abc.1"
@@ -31,8 +31,8 @@ class Despell < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bensadeh/despell/releases/download/0.8/despell_0.8_Linux_arm64.tar.gz"
-      sha256 "0e9c875f0db4fcd4fbebf42438e396f5abf99973f2668091fa997e24b8e3f04c"
+      url "https://github.com/bensadeh/despell/releases/download/0.8.1/despell_0.8.1_Linux_arm64.tar.gz"
+      sha256 "7d89e6c362eea53b1b681e9d2d83019e378bab00beecc24db95ef4ef1543b6ac"
 
       def install
         man1.install "#{buildpath}/share/man/abc.1"
@@ -40,8 +40,8 @@ class Despell < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bensadeh/despell/releases/download/0.8/despell_0.8_Linux_64-bit.tar.gz"
-      sha256 "384e89e233b91065cc9c3665be7f4d8a7f39d0fe630aafe269fd0a4f28633775"
+      url "https://github.com/bensadeh/despell/releases/download/0.8.1/despell_0.8.1_Linux_64-bit.tar.gz"
+      sha256 "9847be50cd37d850a3d536476e5e563ebdb6d03984972c8e389991dac45653bb"
 
       def install
         man1.install "#{buildpath}/share/man/abc.1"
